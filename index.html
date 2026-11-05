@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Privacy Policy for Capacity Gravity - Zero Data Storage, 100% On-Device Storage & Media Cleaner.">
+    <title>Privacy Policy - Capacity Gravity</title>
+    <style>
+        :root {
+            --bg: #070A0F;
+            --surface: #0D1626;
+            --border: #1F2B42;
+            --mint: #5EEAD4;
+            --cyan: #38BDF8;
+            --text-primary: #F8FAFC;
+            --text-secondary: #94A3B8;
+        }
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg);
+            color: var(--text-primary);
+            line-height: 1.6;
+            margin: 0;
+            padding: 40px 20px;
+        }
+        .container {
+            max-width: 780px;
+            margin: 0 auto;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 36px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+        }
+        .badge {
+            display: inline-block;
+            background: rgba(56, 189, 248, 0.12);
+            color: var(--cyan);
+            border: 1px solid rgba(56, 189, 248, 0.35);
+            border-radius: 20px;
+            padding: 4px 14px;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+            margin-bottom: 16px;
+        }
+        h1 {
+            color: var(--text-primary);
+            font-size: 28px;
+            margin-top: 0;
+            letter-spacing: -0.5px;
+        }
+        h2 {
+            color: var(--mint);
+            font-size: 17px;
+            margin-top: 32px;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 8px;
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+        }
+        p, li {
+            color: var(--text-secondary);
+            font-size: 14.5px;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        .card {
+            background: rgba(56, 189, 248, 0.04);
+            border: 1px solid var(--border);
+            border-left: 4px solid var(--cyan);
+            border-radius: 10px;
+            padding: 16px 20px;
+            margin: 20px 0;
+        }
+        .card p {
+            margin: 0;
+            color: var(--text-primary);
+        }
+        code {
+            background: rgba(255, 255, 255, 0.08);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+            font-size: 13px;
+            color: var(--mint);
+        }
+        .highlight {
+            color: var(--cyan);
+            font-weight: 600;
+        }
+        footer {
+            margin-top: 40px;
+            font-size: 12px;
+            color: #64748B;
+            border-top: 1px solid var(--border);
+            padding-top: 16px;
+            text-align: center;
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="badge">100% On-Device Processing</div>
+        <h1>Privacy Policy</h1>
+        <p><strong>Capacity Gravity: Storage & Media Cleaner</strong></p>
+        <p>Last Updated: November 4, 2026</p>
+
+        <div class="card">
+            <p><strong>Zero Data Commitment:</strong> Capacity Gravity is built on an absolute zero-data, on-device architecture. The application physically contains <strong>NO internet permission</strong> (<code>android.permission.INTERNET</code> is absent from the manifest). We collect, transmit, store, track, and sell ZERO bytes of user data.</p>
+        </div>
+
+        <h2>1. Local-Only Execution (Zero Network Access)</h2>
+        <p>Capacity Gravity operates completely air-gapped from the internet. The application cannot establish socket connections, cannot reach remote web servers, and contains no analytics engines, advertising trackers, crash-reporting SDKs, or third-party telemetry libraries.</p>
+
+        <h2>2. Data Collection and Storage</h2>
+        <ul>
+            <li><strong>Personal Data:</strong> None collected. No accounts, emails, passwords, names, or phone numbers are ever requested.</li>
+            <li><strong>Photos & Videos:</strong> Media files are analyzed strictly on-device in volatile CPU memory using local difference hashing (dHash). No images or videos are ever uploaded, synced, or backed up to remote servers.</li>
+            <li><strong>Excluded Scan Folders & Settings:</strong> User-defined excluded folders and settings are stored locally on your device via Android Jetpack Preferences DataStore and are never transmitted off the device.</li>
+            <li><strong>Local Hash Cache:</strong> A lightweight SQLite cache of 64-bit image fingerprints is maintained strictly on-device to accelerate subsequent scans. It contains zero image bytes, thumbnails, or personal information, and is deleted when the app is uninstalled.</li>
+        </ul>
+
+        <h2>3. Device Permissions Explanation</h2>
+        <p>Capacity Gravity requests the minimum local permissions necessary to provide device storage cleanup:</p>
+        <ul>
+            <li><span class="highlight">READ_MEDIA_IMAGES / READ_MEDIA_VIDEO / READ_MEDIA_AUDIO</span>: Required to scan media directories, generate local thumbnails, and compute visual hash signatures to identify burst duplicates.</li>
+            <li><span class="highlight">MANAGE_EXTERNAL_STORAGE</span> (Optional / Elevated): Required on Android 11+ strictly for deep disk scanning to locate unindexed orphaned downloads, messaging media dumps, and stale documents.</li>
+        </ul>
+
+        <h2>4. Data Retention and Deletion</h2>
+        <p>Capacity Gravity does not store copies of your files. When you choose to purge a file, the action is submitted directly to the Android OS confirmation dialog or executed locally on your storage. Deletions are permanent and executed locally.</p>
+
+        <h2>5. Children's Privacy</h2>
+        <p>Capacity Gravity does not collect information from anyone, including children under the age of 13. It is safe for all audiences.</p>
+
+        <h2>6. Contact</h2>
+        <p>For questions or verification regarding this policy, contact the developer at: <span class="highlight">support@futuristiclab.com</span></p>
+
+        <footer>
+            CAPACITY GRAVITY // 100% ON-DEVICE PROCESSING • LOCAL-ONLY EXECUTION
+        </footer>
+    </div>
+</body>
+</html>
